@@ -1,0 +1,57 @@
+﻿using System;
+using System.Windows.Input;
+
+namespace Firma.Helpers
+{
+    public class BaseCommand : ICommand
+    {
+
+        private readonly Action _command;
+        private readonly Func<bool> _canExecute;
+
+        public BaseCommand(Action command, Func<bool> canExecute = null)
+        {
+
+            if (command == null)
+               throw new ArgumentNullException("command");
+            _canExecute = canExecute;
+             _command = command;
+        }
+
+        event EventHandler? ICommand.CanExecuteChanged
+        {
+            add
+            {
+                CommandManager.RequerySuggested += value;
+            }
+
+            remove
+            {
+                CommandManager.RequerySuggested -= value;
+            }
+        }
+
+        public void Execute(object parameter) 
+        {
+        
+            try
+            {
+
+                _command();
+            }
+            catch (Exception ex) 
+            {
+                throw;
+            }
+        }
+        public bool CanExecute(object parameter) 
+        {
+
+            if (_canExecute == null)
+                return true;
+            return _canExecute();
+        }
+
+        public event EventHandler CanExecuteChanged;
+    }
+}

@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Firma.View.Workspaces.ContractorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Firma.View.Workspaces"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="ContractorViewStyle.xaml"/>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <Label Content="Dane kontrahenta" Style="{StaticResource LabelStyle}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Nazwa" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource TextBoxStyle}" Text="{Binding Nazwa}"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="NIP" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource TextBoxStyle}" Text="{Binding NIP}"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Adres" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="4" Grid.Column="2" Style="{StaticResource TextBoxStyle}" Text="{Binding Adres}"/>
+                <Label Grid.Row="6" Grid.Column="0" Content="Miasto" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="6" Grid.Column="2" Style="{StaticResource TextBoxStyle}" Text="{Binding Miasto}"/>
+                <Label Grid.Row="8" Grid.Column="0" Content="Osoba decyzyjna" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="8" Grid.Column="2" Style="{StaticResource TextBoxStyle}" Text="{Binding OsobaDecyzyjna}"/>
+                <Label Grid.Row="10" Grid.Column="0" Content="Adres e-mail" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="10" Grid.Column="2" Style="{StaticResource TextBoxStyle}" Text="{Binding Email}"/>
+            </Grid>
+        </StackPanel>
+        <Button Grid.Row="1" Style="{StaticResource PrimaryButtonStyle}" Content="Zatwierdź zmiany" Margin="0,10,0,10" HorizontalAlignment="Center" Height="30" Width="120"/>
+        <Button Grid.Row="1" Style="{StaticResource PrimaryButtonStyle}" Content="Edytuj" Margin="10" HorizontalAlignment="Left"/>
+        <Button Grid.Row="1" Style="{StaticResource PrimaryButtonStyle}" Content="Dodaj fakturę" Margin="10" HorizontalAlignment="Right"/>
+    </Grid>
+</UserControl>

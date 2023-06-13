@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="Firma.View.UserControls.MenuBar.MenuBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Firma.View.UserControls.MenuBar"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="800">
+    <Menu>
+        <MenuItem Header="System">
+            <MenuItem Header="Logowanie" InputGestureText="Ctrl+L"/>
+            <MenuItem Header="Zmiana firmy" InputGestureText="Ctrl+C"/>
+            <Separator/>
+            <MenuItem Header="Konfiguracja"/>
+            <MenuItem Header="Zmiana hasła"/>
+        </MenuItem>
+        <MenuItem Header="Baza">
+            <MenuItem Header="Dodaj kontrahenta" InputGestureText="Ctrl+A"/>
+            <MenuItem Header="Kontrahenci" InputGestureText="Ctrl+K"/>
+            <Separator/>
+            <MenuItem Header="Pracownicy"/>
+            <MenuItem Header="Grupy towarowe"/>
+        </MenuItem>
+        <MenuItem Header="Rozliczenia">
+            <MenuItem Header="Rozliczenia podmiotu" InputGestureText="Ctrl+R"/>
+            <MenuItem Header="Dokumenty nierozliczone" InputGestureText="Ctrl+N"/>
+            <Separator/>
+            <MenuItem Header="Dokumenty rozliczone"/>
+            <MenuItem Header="Dokumenty kompensat"/>
+        </MenuItem>
+        <MenuItem Header="Rejestry VAT">
+            <MenuItem Header="Rejestry VAT" InputGestureText="Ctrl+V"/>
+            <MenuItem Header="Ewidencja dodatkowa" InputGestureText="Ctrl+E"/>
+            <Separator/>
+            <MenuItem Header="Pliki JPK__V7" InputGestureText="Ctrl+J"/>
+            <MenuItem Header="Deklaracja VAT-UE"/>
+            <MenuItem Header="Deklaracja VAT-8"/>
+            <MenuItem Header="Deklaracja VAT-9M"/>
+        </MenuItem>
+        <MenuItem Header="Księgowość">
+            <MenuItem Header="Dzienniki" InputGestureText="Ctrl+B"/>
+            <MenuItem Header="Plan Kont" InputGestureText="Ctrl+P"/>
+            <Separator/>
+            <MenuItem Header="Obroty i salda"/>
+            <MenuItem Header="Rozrachunki"/>
+        </MenuItem>
+        <MenuItem Header="Deklaracje">
+            <MenuItem Header="PIT" InputGestureText="Ctrl+Z"/>
+            <MenuItem Header="CIT" InputGestureText="Ctrl+X"/>
+        </MenuItem>
+        <MenuItem Header="Środki trwałe">
+            <MenuItem Header="Ewidencja środków trwałych"  InputGestureText="Ctrl+T"/>
+            <MenuItem Header="Dokumenty środków trwałych"/>
+            <MenuItem Header="Ewidencja wyposażenia"/>
+            <MenuItem Header="Inwentaryzacja"/>
+        </MenuItem>
+        <MenuItem Header="Pomoc">
+            <MenuItem Header="Pierwsze kroki"/>
+            <MenuItem Header="Poradnik"/>
+            <MenuItem Header="FAQ"/>
+            <MenuItem Header="O programie"/>
+        </MenuItem>
+    </Menu>
+</UserControl>
